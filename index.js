@@ -1,5 +1,5 @@
-function getRandomNumber() {
-  return Math.floor(Math.random() * 3);
+function getRandomNumber(n) {
+  return Math.floor(Math.random() * n);
 }
 
 function restartGame() {
@@ -7,10 +7,21 @@ function restartGame() {
 }
 
 function getInputFromTextBox() {
-    let input = document.getElementById("userInput").value;
-    if (input >= 3 && input <= 25) {
+  let input = document.getElementById('userInput').value;
+  getPickButtons(input);
+}
+
+function feelingLucky() {
+  let input = getRandomNumber(25);
+  getPickButtons(input);
+}
+
+function getPickButtons(input) {
+  document.getElementById("lucky").disabled = true;
+  document.getElementById("start").disabled = true;
+  if (input >= 3 && input <= 25) {
     let container = document.getElementById('container');
-    let winButton = getRandomNumber();
+    let winButton = getRandomNumber(input);
     for (let i = 0; i < input; ++i) {
       let button = document.createElement('button');
       button.type = 'button';

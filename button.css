@@ -1,14 +1,12 @@
 body {
-  padding: 20px;
+  padding: 0 20px;
   text-align: center;
-}
-.pickButton {
-    font-size: 14px;
-    margin: 8px;
-    padding: 0 10px;
-    line-height: 2;
-    color: white;
-    background: teal;
+  width: 650px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  background-image: url('seaBackground.jpg');
+  background-size: cover;
 }
 
 button {
@@ -24,6 +22,19 @@ button:hover {
   background: lightseagreen;
 }
 
+.pickButton {
+    font-size: 20px;
+    text-align: center;
+    padding: 0 30px;
+    height: 40px;
+    color: white;
+    background: teal;
+}
+
 .pickButton:hover {
   background: turquoise;
+}
+
+button:disabled {
+  background: gray;
 }

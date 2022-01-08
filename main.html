@@ -3,12 +3,16 @@
 <head>
   <link rel="stylesheet" href="button.css">
 </head>
-<body>
-  <h1> Guess the button </h1>
-    <label id='nameLable' for='userInput'>Enter number of buttons:</label>
+<body >
+  <div>
+    <h1> Will you go on vacation this year? </h1>
+    <label id='nameLable' for='userInput'>Enter a number of choises:</label>
     <input id = 'userInput' type = 'number' min = '3' max = '25'>
+    <br>
     <button id = 'start' onclick="getInputFromTextBox()">Start Game</button>
-    <button onclick="restartGame()">Try again</button>
+    <button onclick="restartGame()">Try again</button> <br>
+    <button id = 'lucky' onclick="feelingLucky()">Feeling lucky</button><br>
+  </div>
     <div id="container"></div>
     <script src="index.js"></script>
 </body>
